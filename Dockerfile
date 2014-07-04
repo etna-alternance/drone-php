@@ -7,4 +7,4 @@ RUN echo 'deb-src http://packages.dotdeb.org wheezy-php55 all' >> /etc/apt/sourc
 RUN wget http://www.dotdeb.org/dotdeb.gpg
 RUN apt-key add dotdeb.gpg
 RUN apt-get update
-RUN apt-get install -y php5 php5-cli php5-mysql
+RUN apt-get install -y php5-cli php5-mysql
