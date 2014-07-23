@@ -9,6 +9,8 @@ RUN apt-key add dotdeb.gpg
 RUN apt-get update
 RUN apt-get install -y php5-cli php5-mysql php5-dev php-pear
 
+RUN echo 'date.timezone = "Europe/Paris"' >> /etc/php5/cli/php.ini
+
 ADD ./runkit /tmp/runkit
 RUN pecl install /tmp/runkit/package.xml
 RUN echo 'extension=runkit.so' > /etc/php5/cli/conf.d/30-runkit.ini
